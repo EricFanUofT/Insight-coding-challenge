@@ -1,7 +1,7 @@
 # Insight-coding-challenge
 To calculate the average degree of a vertex in a Twitter hashtag graph
 
-The solution program to calculate the average degree of a vertex in a Twitter hashtag graph was written in Java.  The java.io.*, java.text.*, java.util.* packages were imported.
+The solution program to calculate the average degree of a vertex in a Twitter hashtag graph was written in Java.  The java.io, java.text, java.util packages were imported.
 
 The main idea for this program is to represent the hashtag graph with a HashMap\<String, HashMap\<String, Long\>\> structure.  The first key stores all the nodes (hashtags) in the graph.  The key in the nested HashMap stores all the distinct hashtags the first hashtag is connected to, and the value in the nested HashMap stores the most updated timestamp the link was created.
 
