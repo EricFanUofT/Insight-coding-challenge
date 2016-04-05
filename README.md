@@ -1,2 +1,8 @@
 # Insight-coding-challenge
 To calculate the average degree of a vertex in a Twitter hashtag graph
+
+The solution program to calculate the average degree of a vertex in a Twitter hashtag graph was written in Java.  The java.io.*, java.text.*, java.util.* packages were imported.
+
+The main idea for this program is to represent the hashtag graph with a HashMap<String, HashMap<String, Long>> structure.  The first key stores all the nodes (hashtags) in the graph.  The key in the nested HashMap stores all the distinct hashtags the first hashtag is connected to, and the value in the nested HashMap stores the most updated timestamp the link was created.
+
+The program will iterate through each line of the input tweets.txt file and obtain a timestamp (which is converted to a Long int representing the number of seconds since a reference time) and a list of hashtags.  If the timestamp is no further than 60 sec behind the maximum timestamp, the function addHashtags is called to update the hashtag graph with the new list of hashtags (by adding new nodes, new links to existing nodes, or updating the timestamps on existing links).  If the timestamp is greater than the maximum timestamp, then the maximum timestamp is updated to this new value, and the function removeOldLinks is called to remove any links that has a timestamp value older than 60 seconds from this new maximum timestamp.  Finally, the average degree is calculated by summing the degree of each vertex, and dividing by the number of vertices.  The number of degree of each vertex can be easily determined from the size of the inner HashMap.
